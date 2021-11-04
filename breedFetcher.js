@@ -9,11 +9,11 @@ const fetcher = (breed) => {
         console.log(`There was an error. See for yourself -> ${error}`);
       }
       let bodyObj = JSON.parse(body);
-      if (bodyObj === []) {
+      if (bodyObj.length === 0) {
         return console.log(`Item was not found`);
       } else {
         let result = `Here is a description of ${breed} cats: ${bodyObj[0].description}`;
-        return result;
+        console.log(result);
       }
     }
   );
